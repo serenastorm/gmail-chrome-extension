@@ -7,9 +7,16 @@
   --primary-light: #d6e6f8;
 }
 
-/* Read email */
+/* Read emails */
 .yO {
   background-color: rgba(242, 245, 245, 0.5) !important;
+}
+
+/* Sidebar links */
+.TK .TO,
+.n6 .ah9,
+.CL {
+  border-radius: 0 4px 4px 0 !important;
 }
 
 /* Attachments */
