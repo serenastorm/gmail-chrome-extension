@@ -8,8 +8,8 @@ This is a custom extension I use to make Gmail more readable in Chrome.
 
 1.  Download this repo on your machine.
 2.  _Optional:_ Customise the styles (see below).
-3.  Visit [chrome://extensions/](chrome://extensions/).
-4.  Click **Load Unpacked** and select the repo folder to upload. You'll need to repeat this step every time you update the folder.
+3.  Visit `chrome://extensions/`
+4.  Click **Load Unpacked** and select the repo folder to upload. You'll need to repeat this step every time you update any of the files inside the folder.
 5.  Visit [gmail.com](https://mail.google.com/mail/u/0/). Voilà!
 
 # Customise
@@ -40,4 +40,7 @@ In `scripts.js`, there is a list of 19 `presetColors` based on the [Radix UI](ht
 { displayName: "Payments", ...colorPresets.red }
 ```
 
+# Contribute
+Please feel free to submit PRs or [create an issue](https://github.com/serenastorm/gmail-chrome-extension/issues/new).\
+\
 Made by ♥ by [Serena Antonetti](https://github.com/serenastorm)
