@@ -100,3 +100,8 @@ div[role="navigation"] .aim.ain div[data-tooltip] div,
   border-top-left-radius: 0px !important;
   border-top-right-radius: 0px !important;
 }
+
+/* Remove sidebar drop shadow */
+.aji:after {
+  display: none !important;
+}

@@ -9,10 +9,15 @@ This is a custom extension I use to make Gmail more readable in Chrome.
 1.  Download this repo on your machine.
 2.  _Optional:_ Customise the styles (see below).
 3.  Visit `chrome://extensions/`
-4.  Click **Load Unpacked** and select the repo folder to upload. You'll need to repeat this step every time you update any of the files inside the folder.
-5.  Visit [gmail.com](https://mail.google.com/mail/u/0/). Voilà!
+4.  Turn on [developer mode](https://developer.chrome.com/docs/extensions/mv3/faq/#faq-dev-01)
+5.  Click **Load Unpacked** and upload the folder you downloaded in step 1. You'll need to repeat this step every time you update any of the files inside the folder.
+6.  Visit [gmail.com](https://mail.google.com/mail/u/0/). Voilà!
 
 # Customise
+
+## Focus mode
+
+Visit `chrome://extensions/` and click on the extension's **Details** button. Scroll down to **Extension options**. This should open a popup that lets you hide various part of the Gmail interface, such as Hangouts and Meets. The side panel isn't an option since Gmail already lets you do collapse it.
 
 ## Highlight color
 
@@ -41,6 +46,7 @@ In `scripts.js`, there is a list of 19 `presetColors` based on the [Radix UI](ht
 ```
 
 # Contribute
+
 Please feel free to submit PRs or [create an issue](https://github.com/serenastorm/gmail-chrome-extension/issues/new).\
 \
 Made by ♥ by [Serena Antonetti](https://github.com/serenastorm)

@@ -57,6 +57,78 @@ for (var i = 0, l = labels.length; i < l; i++) {
     div[role="button"][aria-label="${labels[i].displayName}"],
     div[role="button"][aria-label="${labels[i].displayName}"] + div[role="button"][data-tooltip] {
       color: ${labels[i].color} !important;
-    }</style>`
+    }
+    </style>`
   );
 }
+
+chrome.storage.sync.get("hideMeet", function (hideMeetResponse) {
+  if (hideMeetResponse.hideMeet) {
+    document.head.insertAdjacentHTML(
+      "beforeend",
+      `<style>
+      div[role="navigation"][aria-label="Meet"] {
+        display: none !important;
+      }
+      </style>`
+    );
+
+    chrome.storage.sync.get("hideHangouts", function (hideHangoutsResponse) {
+      if (hideHangoutsResponse.hideHangouts) {
+        document.head.insertAdjacentHTML(
+          "beforeend",
+          `<style>
+          /* Add scroll to sidebar parent */
+          .nH {
+            overflow-y: scroll !important;
+          }
+
+          /* Remove height constraint on sidebar and reset overflow */
+          .aeN .ajl {
+            height: auto !important;
+            overflow: initial !important;
+            padding-bottom: 24px !important;
+          }
+
+          /* Add a white background to the compose button on scroll */
+          .aic {
+            position: sticky !important;
+            top: 0 !important;
+            left: 0 !important;
+            z-index: 20 !important;
+            padding: 16px 0 16px !important;
+            background-color: white !important;
+          }
+
+          /* Remove compose button margin since we added padding to the parent */
+          .z0 {
+            margin: 0 !important;
+          }
+
+          div[role="complementary"][aria-label="Hangouts"] {
+            display: none !important;
+          }
+  
+          /* Disable sidebar resizing */
+          .aeO {
+            pointer-events: none !important;
+          }
+          </style>`
+        );
+      }
+    });
+  }
+});
+
+chrome.storage.sync.get("hideHangouts", function (response) {
+  if (response.hideHangouts) {
+    document.head.insertAdjacentHTML(
+      "beforeend",
+      `<style>
+      div[role="complementary"][aria-label="Hangouts"] > div:not([aria-label="Meet"]) {
+        display: none !important;
+      }
+      </style>`
+    );
+  }
+});
