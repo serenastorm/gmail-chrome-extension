@@ -9,8 +9,9 @@ This is a custom extension I use to make Gmail more readable in Chrome.
 1.  Download this repo on your machine.
 2.  _Optional:_ Customise the styles (see below).
 3.  Visit `chrome://extensions/`
-4.  Click **Load Unpacked** and select the repo folder to upload. You'll need to repeat this step every time you update any of the files inside the folder.
-5.  Visit [gmail.com](https://mail.google.com/mail/u/0/). Voilà!
+4.  Turn on [developer mpde](https://developer.chrome.com/docs/extensions/mv3/faq/#faq-dev-01)
+5.  Click **Load Unpacked** and upload the folder you downloaded in step 1. You'll need to repeat this step every time you update any of the files inside the folder.
+6.  Visit [gmail.com](https://mail.google.com/mail/u/0/). Voilà!
 
 # Customise
 
