@@ -3,20 +3,29 @@
 
 <head>
     <title>Gmail extension options</title>
+    <link rel="stylesheet" href="./options.css">
 </head>
 
 <body>
-    <label>
-        <input type="checkbox" id="hideMeet">
-        Hide Meet
-    </label>
-    <label>
-        <input type="checkbox" id="hideHangouts">
-        Hide Hangouts
-    </label>
-
-    <div id="status"></div>
-    <button id="save">Save</button>
+    <fieldset>
+        <legend>Focus mode</legend>
+        <label>
+            <input type="checkbox" id="hideMeet">
+            Hide Meet
+        </label>
+        <label>
+            <input type="checkbox" id="hideHangouts">
+            Hide Hangouts
+        </label>
+        <label>
+            <input type="checkbox" id="hideReadEmails">
+            Hide read emails in inbox
+        </label>
+    </fieldset>
+    <div class="save-btn">
+        <button id="save">Save changes</button>
+        <div id="status"></div>
+    </div>
 
     <script src="./options.js"></script>
 </body>
