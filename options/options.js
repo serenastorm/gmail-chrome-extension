@@ -2,10 +2,12 @@
 function save_options() {
   var hideHangouts = document.getElementById("hideHangouts").checked;
   var hideMeet = document.getElementById("hideMeet").checked;
+  var hideReadEmails = document.getElementById("hideReadEmails").checked;
   chrome.storage.sync.set(
     {
       hideHangouts: hideHangouts,
       hideMeet: hideMeet,
+      hideReadEmails: hideReadEmails,
     },
     function () {
       // Update status to let user know options were saved.
@@ -26,10 +28,12 @@ function restore_options() {
       // Set default values
       hideHangouts: false,
       hideMeet: false,
+      hideReadEmails: false,
     },
     function (items) {
       document.getElementById("hideHangouts").checked = items.hideHangouts;
       document.getElementById("hideMeet").checked = items.hideMeet;
+      document.getElementById("hideReadEmails").checked = items.hideReadEmails;
     }
   );
 }

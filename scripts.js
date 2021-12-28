@@ -79,7 +79,7 @@ chrome.storage.sync.get("hideMeet", function (hideMeetResponse) {
           "beforeend",
           `<style>
           /* Add scroll to sidebar parent */
-          .nH {
+          .nH.oy8Mbf.nn.aeN {
             overflow-y: scroll !important;
           }
 
@@ -128,6 +128,52 @@ chrome.storage.sync.get("hideHangouts", function (response) {
       div[role="complementary"][aria-label="Hangouts"] > div:not([aria-label="Meet"]) {
         display: none !important;
       }
+      </style>`
+    );
+  }
+});
+
+chrome.storage.sync.get("hideReadEmails", function (response) {
+  if (response.hideReadEmails) {
+    document.head.insertAdjacentHTML(
+      "beforeend",
+      `<style>
+      /* Add a min height to the inbox container in case there's no unread emails */
+.aDP > div:first-child.nH {
+  min-height: 26px !important;
+}
+
+/* Since our pseudo element is absolutely 
+positioned, we need to add position: relative 
+to the parent*/
+.aDP > div:first-child {
+  position: relative !important;
+}
+
+/* Add a new email message behind the table */
+.aDP > div:first-child::after {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "No new emails.";
+  width: 100%;
+  text-align: center;
+  margin: 8px auto 0 auto;
+  color: #5f6368;
+  font-size: 14px;
+  z-index: 1;
+}
+
+.aDP > div:first-child > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Hide unread emails */
+.aDP > div:first-child .yO {
+  display: none !important;
+}
       </style>`
     );
   }
